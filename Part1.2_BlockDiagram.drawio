@@ -1,6 +1,6 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36" version="26.1.1">
   <diagram name="Page-1" id="Tml-ByK4S6_2VsTb17KJ">
-    <mxGraphModel dx="988" dy="543" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1659" dy="912" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -41,7 +41,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="HjFdsJPvdDmFHo8kEADV-8" value="System Control Task" style="whiteSpace=wrap;html=1;aspect=fixed;dashed=1;" parent="1" vertex="1">
-          <mxGeometry x="383.46" y="480" width="108" height="108" as="geometry" />
+          <mxGeometry x="360" y="480" width="156" height="156" as="geometry" />
         </mxCell>
         <mxCell id="HjFdsJPvdDmFHo8kEADV-12" value="&lt;b&gt;Wireless Communication&lt;/b&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="583" y="77" width="74.5" height="30" as="geometry" />
@@ -78,7 +78,7 @@
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="HjFdsJPvdDmFHo8kEADV-25" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.524;entryY=0.019;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" edge="1" target="HjFdsJPvdDmFHo8kEADV-8">
+        <mxCell id="HjFdsJPvdDmFHo8kEADV-25" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.513;entryY=-0.001;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" edge="1" target="HjFdsJPvdDmFHo8kEADV-8">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="440" y="350" as="sourcePoint" />
             <mxPoint x="440" y="480" as="targetPoint" />
@@ -145,9 +145,9 @@
         <mxCell id="HjFdsJPvdDmFHo8kEADV-40" value="&lt;b&gt;Actuator Control Task&lt;/b&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="205" y="75.46" width="83.5" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="HjFdsJPvdDmFHo8kEADV-47" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.994;exitY=0.883;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" source="HjFdsJPvdDmFHo8kEADV-8" edge="1">
+        <mxCell id="HjFdsJPvdDmFHo8kEADV-47" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.75;exitDx=0;exitDy=0;" parent="1" source="HjFdsJPvdDmFHo8kEADV-8" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="480" y="550" as="sourcePoint" />
+            <mxPoint x="518" y="602" as="sourcePoint" />
             <mxPoint x="670" y="350" as="targetPoint" />
           </mxGeometry>
         </mxCell>
