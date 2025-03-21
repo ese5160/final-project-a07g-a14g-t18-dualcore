@@ -8,7 +8,7 @@
           <mxGeometry x="389.46000000000004" y="250" width="96" height="40" as="geometry" />
         </mxCell>
         <mxCell id="5Iwn6y3cYDH7FqU4yCxh-15" value="Temperature- Humidity Sensor" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=light-dark(#9da8b9, #ededed);labelBackgroundColor=light-dark(#9da8b9, #ededed);" parent="1" vertex="1">
-          <mxGeometry x="372.46000000000004" y="170" width="130" height="35.46" as="geometry" />
+          <mxGeometry x="372.46" y="170" width="130" height="45" as="geometry" />
         </mxCell>
         <mxCell id="5Iwn6y3cYDH7FqU4yCxh-21" value="WIFI Module" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=light-dark(#e1e6e1, #ededed);labelBackgroundColor=light-dark(#e1e6e1, #ededed);" parent="1" vertex="1">
           <mxGeometry x="571" y="153" width="93" height="50" as="geometry" />
