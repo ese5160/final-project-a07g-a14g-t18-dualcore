@@ -154,4 +154,12 @@ The system shall prevent opening if the window is already fully open and prevent
 
 ## 2. Understanding the Starter Code
 
-**(1) InitializeSerialConsole()** sets up the UART interface by initializing circular buffers (cbufRx for received data and cbufTx for transmitted data), configuring the USART peripheral, registering callbacks, setting the interrupt priority, and starting an asynchronous read operation. cbufRx and cbufTx are circular (ring) buffers, a fixed-size data structure that efficiently manages streaming data using a head and tail pointer, preventing data loss and reducing CPU overhead in serial communication.
+## UART Initialization Overview
+
+**(1) `InitializeSerialConsole()`** sets up the UART interface by initializing circular buffers (**`cbufRx`** for received data and **`cbufTx`** for transmitted data), configuring the USART peripheral, registering callbacks, setting the interrupt priority, and starting an asynchronous read operation. **`cbufRx`** and **`cbufTx`** are **circular (ring) buffers**, a fixed-size data structure that efficiently manages streaming data using a head and tail pointer, preventing data loss and reducing CPU overhead in serial communication.
+
+**(2) `cbufRx` and `cbufTx`** are initialized in `InitializeSerialConsole()` using `circular_buf_init()`, which sets up circular buffers for receiving and transmitting UART data using `rxCharacterBuffer` and `txCharacterBuffer`, each **512 bytes** in size. These buffers manage UART communication efficiently by storing incoming and outgoing characters. The data type **`cbuf_handle_t`** and functions like `circular_buf_init()` and `circular_buf_get()` are likely defined in a separate C file, such as **`circular_buffer.c`** or **`ring_buffer.c`**, with corresponding declarations in a header file like **`circular_buffer.h`**.
+
+**(3) The received (**RX**) and transmitted (**TX**) characters** are stored in the character arrays **`rxCharacterBuffer`** (512 bytes) and **`txCharacterBuffer`** (512 bytes), respectively. These buffers temporarily hold UART data before being processed. While **`cbufRx`** and **`cbufTx`** are circular buffer structures, they internally manage data storage using **`rxCharacterBuffer`** and **`txCharacterBuffer`**, ensuring efficient handling of streaming data.
+
+
