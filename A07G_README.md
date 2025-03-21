@@ -150,4 +150,4 @@ The system shall prevent opening if the window is already fully open and prevent
 
 ## Part (2) : A block diagram outlining the different tasks
 
-![alt text](Block Diagram Outline.drawio.svg)
+![alt text](Block_Diagram_Outline.drawio.svg)
