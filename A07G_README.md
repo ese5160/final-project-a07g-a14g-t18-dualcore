@@ -6,6 +6,10 @@
 * **GitHub Repository URL: https://github.com/ese5160/a00g-devices-designs-diagrams-s25-dualcore**
 * **Description of hardware (embedded hardware, laptop, etc): (1)Apple M3 Pro, macOS Sonoma (2) Apple M1 Pro - Macbook**
 
+## 1. Software Architecture
+
+## Hardware Requirements
+
 #### HRS 01 – Microcontroller & PCB Base
 The project shall be based on a custom PCB integrating a suitable microcontroller (SAM W25). This PCB must provide:
 - General-purpose I/O for motor control and sensor data acquisition.  
@@ -55,7 +59,7 @@ The hardware design shall include protection features such as:
 - Reverse-polarity protection or fuses as needed.  
 - Adequate insulation for high-voltage lines (48 V AC) powering the PDLC film.
 
-## Software Requirements Specification (SRS)
+## Software Requirements
 
 **SRS 01 - Window and Environment Data Retrieval:** The system shall enable users to access real-time window status (open/close/angle) and environmental data (temperature, humidity, air quality) via a smartphone app.
 
