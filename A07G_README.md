@@ -8,7 +8,7 @@
 
 ## 1. Software Architecture
 
-## Part (1) Update the requirements of  HRS & SRS  based on the latest modifications
+## Part (1) : Update the requirements of  HRS & SRS  based on the latest modifications
 
 ## Hardware Requirements Specification (HRS)
 
@@ -148,4 +148,6 @@ The system shall support a voice module to announce time, environmental alerts (
 
 The system shall prevent opening if the window is already fully open and prevent closing if it is already fully closed, avoiding redundant motor actions.
 
-## Part (2)  A block diagram outlining the different tasks
+## Part (2) : A block diagram outlining the different tasks
+
+![alt text](Block Diagram Outline.drawio.svg)
