@@ -8,58 +8,89 @@
 
 ## 1. Software Architecture
 
-## Hardware Requirements
+## Hardware Requirements Specification (HRS)
 
 #### HRS 01 – Microcontroller & PCB Base
+
 The project shall be based on a custom PCB integrating a suitable microcontroller (SAM W25). This PCB must provide:
-- General-purpose I/O for motor control and sensor data acquisition.  
-- At least one communication interface (e.g., UART/SPI/I²C) for the LCD screen.  
+
+- General-purpose I/O for motor control and sensor data acquisition.
+  
+- At least one communication interface (e.g., UART/SPI/I²C) for the LCD screen.
+  
 - Wireless connectivity (Wi-Fi/Bluetooth) for smartphone control, or headers for an external module.
 
 #### HRS 02 – Sensors  
+
 The system shall incorporate:  
-- A **Temperature-Humidity Sensor** (e.g., DHTxx/SHTxx) to measure ambient conditions.  
+
+- A **Temperature-Humidity Sensor** (e.g., DHTxx/SHTxx) to measure ambient conditions.
+  
 - An **Air Quality Sensor** (e.g., MQ-series, CCS811, or similar) capable of detecting smoke or poor air quality.  
 
 All sensors must operate under the expected environmental conditions (e.g., indoor ranges of temperature and humidity) and provide reliable, stable readings.
 
 #### HRS 03 – Motor Driver & Window Actuator
-A motor driver circuit (integrated on the custom PCB or via a module) shall deliver the necessary current/voltage to a DC or servo motor that adjusts the window’s opening angle. This includes:
-- Support for PWM or position feedback control if using servo motors.  
-- Overcurrent or thermal protection mechanisms.  
+
+A motor driver circuit (integrated on the custom PCB or via a module) shall deliver the necessary current/voltage to a DC or Continuous Rotation Servo that adjusts the window’s opening angle. This includes:
+
+- Support for PWM or position feedback control when we use Continuous Rotation Servo.
+  
+- Overcurrent or thermal protection mechanisms.
+  
 - Secure mechanical coupling to the window’s frame or rod.
 
 #### HRS 04 – PDLC Film Power and Control
-The PCB shall feature a step-up converter to approximately 48 V DC, plus a DC-to-AC conversion stage, enabling segmented control of the PDLC film for time display.  
-- Each 7-segment “digit” on the glass must be individually switchable.  
-- The system shall refresh the displayed time at a minimum of once per minute (using the onboard RTC).  
+
+The PCB shall feature a step-up converter to approximately 48 V DC, plus a DC-to-AC conversion stage, enabling segmented control of the PDLC film for time display:
+
+- Each 7-segment “digit” on the glass must be individually switchable.
+  
+- The system shall refresh the displayed time at a minimum of once per minute (using the onboard RTC).
+  
 - Safe isolation and protective measures against high-voltage lines are required.
 
-#### HRS 05 – LCD Display
-An LCD module (dimensions as appropriate for the window frame) shall be integrated for system status and sensor data presentation.  
-- Communicates with the microcontroller over SPI or a parallel bus.  
-- Must be clearly visible from typical indoor viewing distances.  
-- The PCB should provide the necessary power regulation (3.3 V or 5 V) and backlight control.
+#### HRS 05 – Switch Reed Integration
+
+The system shall incorporate a reed switch to ensure precise detection of the window’s fully closed state. This includes:
+
+- Interrupt-based or polling-based detection mechanism integrated with the microcontroller.
+
+- Automatic stopping of the servo motor when the closed position is detected.
+
+- Reliable and durable placement to avoid false triggers or misalignment over time.
 
 #### HRS 06 – Voice System  
+
 The hardware design shall allow for an optional voice module, including:  
-- A small speaker or amplifier on the PCB or connected via headers.  
-- A microcontroller interface (e.g., UART or I²S) for TTS or pre-recorded audio playback.  
+
+- A small speaker or amplifier on the PCB or connected via headers.
+  
+- A microcontroller interface (e.g., UART or I²S) for TTS or pre-recorded audio playback.
+  
 - Adequate power supply to drive the speaker without distortion.
 
 #### HRS 07 – Housing & Mounting
+
 All PCB components must fit within the acrylic window frame enclosure to protect electronics. Additionally:  
-- Mounting points on the PCB for screws or standoffs to secure it in place.  
-- The LCD shall be flush-mounted or otherwise integrated into the frame for user viewing.  
+
+- Mounting points on the PCB for screws or standoffs to secure it in place.
+  
+- The LCD shall be flush-mounted or otherwise integrated into the frame for user viewing.
+  
 - Proper ventilation or heat dissipation strategies for voltage regulators and motor drivers.
 
 #### HRS 08 – Safety & Protection  
+
 The hardware design shall include protection features such as:  
-- Overvoltage/overcurrent safeguards on motor driver and PDLC driver stages.  
-- Reverse-polarity protection or fuses as needed.  
+
+- Overvoltage/overcurrent safeguards on motor driver and PDLC driver stages.
+  
+- Reverse-polarity protection or fuses as needed.
+  
 - Adequate insulation for high-voltage lines (48 V AC) powering the PDLC film.
 
-## Software Requirements
+## Software Requirements Specification (SRS)
 
 **SRS 01 - Window and Environment Data Retrieval:** The system shall enable users to access real-time window status (open/close/angle) and environmental data (temperature, humidity, air quality) via a smartphone app.
 
