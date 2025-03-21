@@ -151,3 +151,7 @@ The system shall prevent opening if the window is already fully open and prevent
 ## Part (2) : A block diagram outlining the different tasks
 
 ![alt text](Part1.2_BlockDiagram.drawio.svg)
+
+## 2. Understanding the Starter Code
+
+**(1) InitializeSerialConsole()** sets up the UART interface by initializing circular buffers (cbufRx for received data and cbufTx for transmitted data), configuring the USART peripheral, registering callbacks, setting the interrupt priority, and starting an asynchronous read operation. cbufRx and cbufTx are circular (ring) buffers, a fixed-size data structure that efficiently manages streaming data using a head and tail pointer, preventing data loss and reducing CPU overhead in serial communication.
