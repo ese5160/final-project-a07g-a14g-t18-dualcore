@@ -60,7 +60,17 @@ The system shall incorporate a reed switch to ensure precise detection of the wi
 
 - Reliable and durable placement to avoid false triggers or misalignment over time.
 
-#### HRS 06 – Voice System  
+#### HRS 06 – Steel Flat-Edge Sliding Window Roller Assembly
+
+- The system shall include a steel flat-edge sliding window roller assembly to ensure smooth and fluent movement during window opening and closing. This includes:
+
+- High-durability rollers capable of supporting the window's weight.
+
+- Minimal friction design for seamless motion.
+
+- Secure mounting and alignment to prevent jamming or misalignment.
+
+#### HRS 07 – Voice System  
 
 The hardware design shall allow for an optional voice module, including:  
 
@@ -70,7 +80,7 @@ The hardware design shall allow for an optional voice module, including:
   
 - Adequate power supply to drive the speaker without distortion.
 
-#### HRS 07 – Housing & Mounting
+#### HRS 08 – Housing & Mounting
 
 All PCB components must fit within the acrylic window frame enclosure to protect electronics. Additionally:  
 
@@ -80,7 +90,7 @@ All PCB components must fit within the acrylic window frame enclosure to protect
   
 - Proper ventilation or heat dissipation strategies for voltage regulators and motor drivers.
 
-#### HRS 08 – Safety & Protection  
+#### HRS 09 – Safety & Protection  
 
 The hardware design shall include protection features such as:  
 
@@ -92,26 +102,46 @@ The hardware design shall include protection features such as:
 
 ## Software Requirements Specification (SRS)
 
-**SRS 01 - Window and Environment Data Retrieval:** The system shall enable users to access real-time window status (open/close/angle) and environmental data (temperature, humidity, air quality) via a smartphone app.
+**SRS 01 - Window and Environment Data Retrieval:** 
 
-**SRS 02 - Window Time Adjustment:** The system shall allow users to modify automatic window operating times (e.g., morning open, evening close) through the app.
+The system shall enable users to access real-time window status (open/close/angle) and environmental data (temperature, humidity, air quality) via a smartphone app.
 
-**SRS 03 - Manual Window Opening:** The app shall provide a feature to open the window to a desired angle using an “Open Window” button.
+**SRS 02 - Window Time Adjustment:** 
 
-**SRS 04 - Automated Window Opening by Time:** Users shall be able to set specific times for automatic window opening in the app.
+The system shall allow users to modify automatic window operating times (e.g., morning open, evening close) through the app.
 
-**SRS 05 - Automated Window Opening by Smoke:** If the air quality sensor detects smoke or poor air quality, the system shall immediately open the window for ventilation (highest priority).
+**SRS 03 - Manual Window Opening:** 
 
-**SRS 06 - Manual Window Closing:** The app shall include a “Close Window” button for manual window closure or angle adjustment.
+The app shall provide a feature to open the window to a desired angle using an “Open Window” button.
 
-**SRS 07 - Automated Window Closing by Time:** Users shall be able to program specific times for automatic window closure in the app.
+**SRS 04 - Automated Window Opening by Time:** 
 
-**SRS 08 - Automated Window Closing by Rain:** When rain or high humidity is detected, the system shall close the window to prevent water from entering. This has a lower priority than smoke detection but higher than standard scheduling.
+Users shall be able to set specific times for automatic window opening in the app.
 
-**SRS 09 - PDLC Film Time Display：** Using PDLC film segments on the glass, the system shall display the current time in a 7-segment style (HH: MM), driven by an internal or external RTC.
+**SRS 05 - Automated Window Opening by Smoke:** 
+
+If the air quality sensor detects smoke or poor air quality, the system shall immediately open the window for ventilation (highest priority).
+
+**SRS 06 - Manual Window Closing:** 
+
+The app shall include a "Open Window" and "Close Window" button for manual window closure or angle adjustment.
+
+**SRS 07 - Automated Window Closing by Time:** 
+
+Users shall be able to program specific times for automatic window closure in the app.
+
+**SRS 08 - Automated Window Closing by Rain:** 
+
+When rain or high humidity is detected, the system shall close the window to prevent water from entering. This has a lower priority than smoke detection but higher than standard scheduling.
+
+**SRS 09 - PDLC Film Time and Weather Display：** 
+
+Using PDLC film segments on the glass, the system shall display the current time and weather in a 7-segment style (HH: MM), driven by an internal or external RTC.
 
 **SRS 10 - Voice System / Spoken Alerts:**
+
 The system shall support a voice module to announce time, environmental alerts (smoke/rain), or user notifications.
 
 **SRS 11 - Window Opening/Closing Constraints:**
+
 The system shall prevent opening if the window is already fully open and prevent closing if it is already fully closed, avoiding redundant motor actions.
