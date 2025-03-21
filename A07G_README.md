@@ -8,6 +8,8 @@
 
 ## 1. Software Architecture
 
+## Part (1)
+
 ## Hardware Requirements Specification (HRS)
 
 #### HRS 01 – Microcontroller & PCB Base
@@ -145,3 +147,5 @@ The system shall support a voice module to announce time, environmental alerts (
 **SRS 11 - Window Opening/Closing Constraints:**
 
 The system shall prevent opening if the window is already fully open and prevent closing if it is already fully closed, avoiding redundant motor actions.
+
+## Part (2)
