@@ -6,9 +6,9 @@
 * **GitHub Repository URL: https://github.com/ese5160/a00g-devices-designs-diagrams-s25-dualcore**
 * **Description of hardware (embedded hardware, laptop, etc): (1)Apple M3 Pro, macOS Sonoma (2) Apple M1 Pro - Macbook**
 
-## 1. Software Architecture
+## Part 1. Software Architecture
 
-## Part (1) : Update the requirements of  HRS & SRS  based on the latest modifications
+## (1) : Update the requirements of  HRS & SRS  based on the latest modifications
 
 ## Hardware Requirements Specification (HRS)
 
@@ -148,11 +148,11 @@ The system shall support a voice module to announce time, environmental alerts (
 
 The system shall prevent opening if the window is already fully open and prevent closing if it is already fully closed, avoiding redundant motor actions.
 
-## Part (2) : A block diagram outlining the different tasks
+## (2) : A block diagram outlining the different tasks
 
 ![alt text](Part1.2_BlockDiagram.drawio.svg)
 
-## 2. Understanding the Starter Code
+## Part 2. Understanding the Starter Code
 
 **(1) `InitializeSerialConsole()`** sets up the UART interface by initializing circular buffers (**`cbufRx`** for received data and **`cbufTx`** for transmitted data), configuring the USART peripheral, registering callbacks, setting the interrupt priority, and starting an asynchronous read operation. **`cbufRx`** and **`cbufTx`** are **circular (ring) buffers**, a fixed-size data structure that efficiently manages streaming data using a head and tail pointer, preventing data loss and reducing CPU overhead in serial communication.
 
@@ -167,6 +167,26 @@ The system shall prevent opening if the window is already fully open and prevent
 **(6)** In **`usart_read_callback()`**, when a character is **received (RX)**, it is added to the **`cbufRx`** circular buffer, allowing the system to store incoming UART data efficiently. Similarly, in **`usart_write_callback()`**, when a character has been **sent (TX)**, the next character is retrieved from **`cbufTx`** and transmitted via **`usart_write_buffer_job()`**, ensuring continuous data transmission. These callbacks manage UART communication asynchronously by using **`cbufRx`** and **`cbufTx`** to buffer received and transmitted characters, preventing data loss and reducing CPU overhead.
 
 **(9)** The function **`StartTasks()`** initializes system tasks and prints the available heap memory before and after task creation. It starts the **Command Line Interface (CLI) task** using **`xTaskCreate(vCommandConsoleTask, "CLI_TASK", CLI_TASK_SIZE, NULL, CLI_PRIORITY, &cliTaskHandle)`**. If the task creation fails, an error message is printed. Based on the provided code, only **one thread (CLI task)** is explicitly started in this function.
+
+## Part 4. Wiretap the convo!
+
+**(1)** The **UART communication** between the **SAMW25** and **EDBG IC** occurs on **SERCOM4**. From `SerialConsole.c`, the **TX** (SAMW25 → EDBG) is mapped to `PA24`, and **RX** (EDBG → SAMW25) is mapped to `PA25`. To capture data using the Saleae Logic 8, attach the logic analyzer as follows:  
+- **TX (SAMW25 → EDBG)**: `PA24` → `Channel 0`  
+- **RX (EDBG → SAMW25)**: `PA25` → `Channel 1`  
+- **GND**: Connect to board ground.  
+
+**Pin Mapping**
+
+| **Signal** | **SAMW25 Pin** | **Logic Analyzer Channel** |
+|:------------|:---------------|:---------------------------|
+| UART TX       | PA24           | CH0                        |
+| UART RX       | PA25           | CH1                        |
+| GND           | GND            | GND                        |
+
+**(2) Best connection points:**
+- **Test pads:** (Check Altium design)
+- **Debug header (J200 or similar)**
+- **Direct pin soldering (last resort)**
 
 
 
