@@ -170,7 +170,13 @@ The system shall prevent opening if the window is already fully open and prevent
 
 ## Part 3. Debug Logger Module 
 
-![alt text](A07G_DebugLogger_Info)
+**Link of Debug Logger Module in Github Repository:**
+
+https://github.com/ese5160/final-project-a07g-a14g-t18-dualcore/tree/main/A07G%20Debug%20Logger%20Module
+
+**Output of Debug Logger Module:**
+
+![alt text](A07G_DebugLogger_Info.png)
 
 ## Part 4. Wiretap the convo!
 
