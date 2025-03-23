@@ -176,7 +176,7 @@ https://github.com/ese5160/final-project-a07g-a14g-t18-dualcore/tree/main/A07G%2
 
 **Output of Debug Logger Module:**
 
-![alt text](A07G_DebugLogger_Info.png)
+![alt text](A07G_DebugLogger_Output.png)
 
 ## Part 4. Wiretap the convo!
 
@@ -210,8 +210,15 @@ https://github.com/ese5160/final-project-a07g-a14g-t18-dualcore/tree/main/A07G%2
 - **Inverted Signal:** `No`
 - **Triggering:** "Start Capture on UART Activity" (Edge trigger on TX)
 
-## 2. Photo of Our Hardware Connections:
+## 2. Photo of Our Hardware Connections (A07G_Logic8_Hardware.png):
 
+![alt text](A07G_Logic8_Hardware.png)
+
+## 3. Screenshot of the Decoded Message (A07G_Logic8_Decoded_Message.png)
+
+![alt text](A07G_Logic8_Decoded_Message.png)
+
+## 4. A Small Capture File of a Wiretapped Conversation
 
 
 
