@@ -194,9 +194,20 @@ https://github.com/ese5160/final-project-a07g-a14g-t18-dualcore/tree/main/A07G%2
 | GND           | GND            | GND                        |
 
 **(2) Best connection points:**
-- **Test pads:** (Check Altium design)
-- **Debug header (J200 or similar)**
-- **Direct pin soldering (last resort)**
+
+- **Test pads:** heck Altium design
+- **Debug header:** J200 or similar
+- **Direct pin soldering:** last resort
+
+**(3) Critical Settings for the Logic Analyzer**
+
+- **Baud Rate:** `115200`
+- **Data Bits:** `8`
+- **Parity:** `None`
+- **Stop Bits:** `1`
+- **Inverted Signal:** `No`
+- **Triggering:** "Start Capture on UART Activity" (Edge trigger on TX)
+
 
 
 
