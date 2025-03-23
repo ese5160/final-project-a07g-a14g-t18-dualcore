@@ -72,17 +72,7 @@ The system shall incorporate a reed switch to ensure precise detection of the wi
 
 - Secure mounting and alignment to prevent jamming or misalignment.
 
-#### HRS 07 – Voice System  
-
-The hardware design shall allow for an optional voice module, including:  
-
-- A small speaker or amplifier on the PCB or connected via headers.
-  
-- A microcontroller interface (e.g., UART or I²S) for TTS or pre-recorded audio playback.
-  
-- Adequate power supply to drive the speaker without distortion.
-
-#### HRS 08 – Housing & Mounting
+#### HRS 07 – Housing & Mounting
 
 All PCB components must fit within the acrylic window frame enclosure to protect electronics. Additionally:  
 
@@ -92,7 +82,7 @@ All PCB components must fit within the acrylic window frame enclosure to protect
   
 - Proper ventilation or heat dissipation strategies for voltage regulators and motor drivers.
 
-#### HRS 09 – Safety & Protection  
+#### HRS 08 – Safety & Protection  
 
 The hardware design shall include protection features such as:  
 
@@ -148,7 +138,7 @@ The system shall support a voice module to announce time, environmental alerts (
 
 The system shall prevent opening if the window is already fully open and prevent closing if it is already fully closed, avoiding redundant motor actions.
 
-## (2) : A block diagram outlining the different tasks
+## (2) : A block diagram outlining the different tasks (Part1.2_BlockDiagram.drawio.svg):
 
 ![alt text](Part1.2_BlockDiagram.drawio.svg)
 
@@ -170,7 +160,7 @@ The system shall prevent opening if the window is already fully open and prevent
 
 ## Part 3. Debug Logger Module 
 
-**Link of Debug Logger Module in Github Repository:**
+**Link of Debug Logger Module in Github Repository (A07G Debug Logger Module):**
 
 https://github.com/ese5160/final-project-a07g-a14g-t18-dualcore/tree/main/A07G%20Debug%20Logger%20Module
 
