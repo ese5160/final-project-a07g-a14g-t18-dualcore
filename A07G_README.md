@@ -174,7 +174,7 @@ The system shall prevent opening if the window is already fully open and prevent
 
 https://github.com/ese5160/final-project-a07g-a14g-t18-dualcore/tree/main/A07G%20Debug%20Logger%20Module
 
-**Output of Debug Logger Module:**
+**Output of Debug Logger Module (A07G_DebugLogger_Output.png):**
 
 ![alt text](A07G_DebugLogger_Output.png)
 
@@ -214,11 +214,13 @@ https://github.com/ese5160/final-project-a07g-a14g-t18-dualcore/tree/main/A07G%2
 
 ![alt text](A07G_Logic8_Hardware.png)
 
-## 3. Screenshot of the Decoded Message (A07G_Logic8_Decoded_Message.png)
+## 3. Screenshot of the Decoded Message (A07G_Logic8_DecodedMessage.png):
 
-![alt text](A07G_Logic8_Decoded_Message.png)
+![alt text](A07G_Logic8_DecodedMessage.png)
 
-## 4. A Small Capture File of a Wiretapped Conversation
+## 4. A Small Capture File of a Wiretapped Conversation (Logic8_DecodedMessage.sal):
+
+https://github.com/ese5160/final-project-a07g-a14g-t18-dualcore/blob/main/Logic8_DecodedMessage.sal
 
 
 
