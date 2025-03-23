@@ -180,6 +180,8 @@ https://github.com/ese5160/final-project-a07g-a14g-t18-dualcore/tree/main/A07G%2
 
 ## Part 4. Wiretap the convo!
 
+## 1. Submit Our Answers to Github Repository:
+
 **(1)** The **UART communication** between the **SAMW25** and **EDBG IC** occurs on **SERCOM4**. From `SerialConsole.c`, the **TX** (SAMW25 → EDBG) is mapped to `PA24`, and **RX** (EDBG → SAMW25) is mapped to `PA25`. To capture data using the Saleae Logic 8, attach the logic analyzer as follows:  
 - **TX (SAMW25 → EDBG)**: `PA24` → `Channel 0`  
 - **RX (EDBG → SAMW25)**: `PA25` → `Channel 1`  
@@ -207,6 +209,8 @@ https://github.com/ese5160/final-project-a07g-a14g-t18-dualcore/tree/main/A07G%2
 - **Stop Bits:** `1`
 - **Inverted Signal:** `No`
 - **Triggering:** "Start Capture on UART Activity" (Edge trigger on TX)
+
+## 2. Photo of Our Hardware Connections:
 
 
 
