@@ -168,6 +168,10 @@ The system shall prevent opening if the window is already fully open and prevent
 
 **(9)** The function **`StartTasks()`** initializes system tasks and prints the available heap memory before and after task creation. It starts the **Command Line Interface (CLI) task** using **`xTaskCreate(vCommandConsoleTask, "CLI_TASK", CLI_TASK_SIZE, NULL, CLI_PRIORITY, &cliTaskHandle)`**. If the task creation fails, an error message is printed. Based on the provided code, only **one thread (CLI task)** is explicitly started in this function.
 
+## Part 3. Debug Logger Module 
+
+![alt text](A07G_DebugLogger_Info)
+
 ## Part 4. Wiretap the convo!
 
 **(1)** The **UART communication** between the **SAMW25** and **EDBG IC** occurs on **SERCOM4**. From `SerialConsole.c`, the **TX** (SAMW25 → EDBG) is mapped to `PA24`, and **RX** (EDBG → SAMW25) is mapped to `PA25`. To capture data using the Saleae Logic 8, attach the logic analyzer as follows:  
