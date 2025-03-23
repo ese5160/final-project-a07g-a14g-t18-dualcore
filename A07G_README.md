@@ -154,9 +154,9 @@ The system shall prevent opening if the window is already fully open and prevent
 
 ## Part 2. Understanding the Starter Code
 
-**(1) `InitializeSerialConsole()`** sets up the UART interface by initializing circular buffers (**`cbufRx`** for received data and **`cbufTx`** for transmitted data), configuring the USART peripheral, registering callbacks, setting the interrupt priority, and starting an asynchronous read operation. **`cbufRx`** and **`cbufTx`** are **circular (ring) buffers**, a fixed-size data structure that efficiently manages streaming data using a head and tail pointer, preventing data loss and reducing CPU overhead in serial communication.
+**(1) `InitializeSerialConsole()`** sets up the UART interface by initializing circular buffers (**`cbufRx`** for received data and **`cbufTx`** for transmitted data), configuring the USART peripheral, registering callbacks, setting the interrupt priority, and starting an asynchronous read operation. **`cbufRx`** and **`cbufTx`** are **circular buffers**, a fixed-size data structure that efficiently manages streaming data using a head and tail pointer, preventing data loss and reducing CPU overhead in serial communication.
 
-**(2) `cbufRx` and `cbufTx`** are initialized in `InitializeSerialConsole()` using `circular_buf_init()`, which sets up circular buffers for receiving and transmitting UART data using `rxCharacterBuffer` and `txCharacterBuffer`, each **512 bytes** in size. These buffers manage UART communication efficiently by storing incoming and outgoing characters. The data type **`cbuf_handle_t`** and functions like `circular_buf_init()` and `circular_buf_get()` are likely defined in a separate C file, such as **`circular_buffer.c`** or **`ring_buffer.c`**, with corresponding declarations in a header file like **`circular_buffer.h`**.
+**(2) `cbufRx` and `cbufTx`** are initialized in `InitializeSerialConsole()` using `circular_buf_init()`, which sets up circular buffers for receiving and transmitting UART data using `rxCharacterBuffer` and `txCharacterBuffer`, each **512 bytes** in size. These buffers manage UART communication efficiently by storing incoming and outgoing characters. The data type **`cbuf_handle_t`** and functions like `circular_buf_init()` and `circular_buf_get()` are likely defined in a separate C file, **`circular_buffer.c`**, with corresponding declarations in a header file like **`circular_buffer.h`**.
 
 **(3) The received (**RX**) and transmitted (**TX**) characters** are stored in the character arrays **`rxCharacterBuffer`** (512 bytes) and **`txCharacterBuffer`** (512 bytes), respectively. These buffers temporarily hold UART data before being processed. While **`cbufRx`** and **`cbufTx`** are circular buffer structures, they internally manage data storage using **`rxCharacterBuffer`** and **`txCharacterBuffer`**, ensuring efficient handling of streaming data.
 
@@ -183,8 +183,8 @@ https://github.com/ese5160/final-project-a07g-a14g-t18-dualcore/tree/main/A07G%2
 ## 1. Submit Our Answers to Github Repository:
 
 **(1)** The **UART communication** between the **SAMW25** and **EDBG IC** occurs on **SERCOM4**. From `SerialConsole.c`, the **TX** (SAMW25 → EDBG) is mapped to `PA24`, and **RX** (EDBG → SAMW25) is mapped to `PA25`. To capture data using the Saleae Logic 8, attach the logic analyzer as follows:  
-- **TX (SAMW25 → EDBG)**: `PA24` → `Channel 0`  
-- **RX (EDBG → SAMW25)**: `PA25` → `Channel 1`  
+- **TX (SAMW25 → EDBG)**: `PB10` → `Channel 0`  
+- **RX (EDBG → SAMW25)**: `PB11` → `Channel 1`  
 - **GND**: Connect to board ground.  
 
 **Pin Mapping**
