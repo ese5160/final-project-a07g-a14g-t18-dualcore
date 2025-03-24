@@ -189,8 +189,8 @@ https://github.com/ese5160/final-project-a07g-a14g-t18-dualcore/tree/main/A07G%2
 
 | **Signal** | **SAMW25 Pin** | **Logic Analyzer Channel** |
 |:------------|:---------------|:---------------------------|
-| UART TX       | PA24           | CH0                        |
-| UART RX       | PA25           | CH1                        |
+| UART TX       | PB10           | CH0                        |
+| UART RX       | PB11           | CH1                        |
 | GND           | GND            | GND                        |
 
 **(2) Best connection points:**
