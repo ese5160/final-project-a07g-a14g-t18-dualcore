@@ -102,21 +102,21 @@ The system shall enable users to access real-time window status (open/close/angl
 
 The system shall allow users to modify automatic window operating times (e.g., morning open, evening close) through the app.
 
-**SRS 03 - Manual Window Opening:** 
+**SRS 03 - Manual Window Opening and Closing:** 
 
-The app shall provide a feature to open the window to a desired angle using an “Open Window” button.
+Node-red Dashboard shall provide a Virtual Button to "Open Window" and "Close Window" or angle adjustment.
 
-**SRS 04 - Automated Window Opening by Time:** 
+**SRS 04 - Manual Angle Adjustment for Manual Window Control:**
+
+Node-red Dashboard shall provide a input function for Angle Adjustment.
+
+**SRS 05 - Automated Window Opening by Time:** 
 
 Users shall be able to set specific times for automatic window opening in the app.
 
-**SRS 05 - Automated Window Opening by Smoke:** 
+**SRS 06 - Automated Window Opening by Smoke:** 
 
 If the air quality sensor detects smoke or poor air quality, the system shall immediately open the window for ventilation (highest priority).
-
-**SRS 06 - Manual Window Closing:** 
-
-The app shall include a "Open Window" and "Close Window" button for manual window closure or angle adjustment.
 
 **SRS 07 - Automated Window Closing by Time:** 
 
@@ -132,11 +132,11 @@ Using PDLC film segments on the glass, the system shall display the current time
 
 **SRS 10 - Voice System / Spoken Alerts:**
 
-Node-red Dashboard shall support a voice module to announce time, environmental alerts (smoke/rain), or user notifications.
+Node-red Dashboard shall support a Virtual Voice Module to announce time, environmental alerts (smoke/rain), or user notifications.
 
-**SRS 11 - Window Opening/Closing Constraints:**
+**SRS 11 - Window Opening / Closing Constraints:**
 
-The system shall prevent opening if the window is already fully open and prevent closing if it is already fully closed, avoiding redundant motor actions.
+The system shall prevent excessive opening or closing if the window is already fully open or closed, avoiding redundant motor actions.
 
 ## (2) : A block diagram outlining the different tasks (Part1.2_BlockDiagram.svg):
 
