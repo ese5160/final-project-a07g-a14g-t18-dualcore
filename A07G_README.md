@@ -132,15 +132,15 @@ Using PDLC film segments on the glass, the system shall display the current time
 
 **SRS 10 - Voice System / Spoken Alerts:**
 
-The system shall support a voice module to announce time, environmental alerts (smoke/rain), or user notifications.
+Node-red Dashboard shall support a voice module to announce time, environmental alerts (smoke/rain), or user notifications.
 
 **SRS 11 - Window Opening/Closing Constraints:**
 
 The system shall prevent opening if the window is already fully open and prevent closing if it is already fully closed, avoiding redundant motor actions.
 
-## (2) : A block diagram outlining the different tasks (Part1.2_BlockDiagram.drawio.svg):
+## (2) : A block diagram outlining the different tasks (Part1.2_BlockDiagram.svg):
 
-![alt text](Part1.2_BlockDiagram.drawio.svg)
+![alt text](Part1.2_BlockDiagram.svg)
 
 ## Part 2. Understanding the Starter Code
 
