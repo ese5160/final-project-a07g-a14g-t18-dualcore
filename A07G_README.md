@@ -160,6 +160,8 @@ The system shall prevent excessive opening or closing if the window is already f
 
 ![alt text](A07G_UART_Receive.svg)
 
+**(8) UART Transmission Flowchart:**
+
 **(9)** The function **`StartTasks()`** initializes system tasks and prints the available heap memory before and after task creation. It starts the **Command Line Interface (CLI) task** using **`xTaskCreate(vCommandConsoleTask, "CLI_TASK", CLI_TASK_SIZE, NULL, CLI_PRIORITY, &cliTaskHandle)`**. If the task creation fails, an error message is printed. Based on the provided code, only **one thread (CLI task)** is explicitly started in this function.
 
 ## Part 3. Debug Logger Module 
