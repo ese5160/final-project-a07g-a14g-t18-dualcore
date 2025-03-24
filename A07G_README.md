@@ -156,6 +156,10 @@ The system shall prevent excessive opening or closing if the window is already f
 
 **(6)** In **`usart_read_callback()`**, when a character is **received (RX)**, it is added to the **`cbufRx`** circular buffer, allowing the system to store incoming UART data efficiently. Similarly, in **`usart_write_callback()`**, when a character has been **sent (TX)**, the next character is retrieved from **`cbufTx`** and transmitted via **`usart_write_buffer_job()`**, ensuring continuous data transmission. These callbacks manage UART communication asynchronously by using **`cbufRx`** and **`cbufTx`** to buffer received and transmitted characters, preventing data loss and reducing CPU overhead.
 
+**(7) UART Receive Flowchart:**
+
+![alt text](A07G_UART_Receive.svg)
+
 **(9)** The function **`StartTasks()`** initializes system tasks and prints the available heap memory before and after task creation. It starts the **Command Line Interface (CLI) task** using **`xTaskCreate(vCommandConsoleTask, "CLI_TASK", CLI_TASK_SIZE, NULL, CLI_PRIORITY, &cliTaskHandle)`**. If the task creation fails, an error message is printed. Based on the provided code, only **one thread (CLI task)** is explicitly started in this function.
 
 ## Part 3. Debug Logger Module 
