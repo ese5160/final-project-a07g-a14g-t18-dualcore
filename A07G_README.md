@@ -138,9 +138,9 @@ Node-red Dashboard shall support a Virtual Voice Module to announce time, enviro
 
 The system shall prevent excessive opening or closing if the window is already fully open or closed, avoiding redundant motor actions.
 
-## (2) : A block diagram outlining the different tasks (Part1.2_BlockDiagram.svg):
+## (2) : A block diagram outlining the different tasks (A07G_BlockDiagram.svg):
 
-![alt text](Part1.2_BlockDiagram.svg)
+![alt text](A07G_BlockDiagram.svg)
 
 ## Part 2. Understanding the Starter Code
 
