@@ -180,12 +180,12 @@ https://github.com/ese5160/final-project-a07g-a14g-t18-dualcore/tree/main/A07G%2
 
 ## 1. Submit Our Answers to Github Repository:
 
-**(1)** The **UART communication** between the **SAMW25** and **EDBG IC** occurs on **SERCOM4**. From `SerialConsole.c`, the **TX** (SAMW25 → EDBG) is mapped to `PB10`, and **RX** (EDBG → SAMW25) is mapped to `PB11`. To capture data using the Saleae Logic 8, attach the logic analyzer as follows:  
-- **TX (SAMW25 → EDBG)**: `PB10` → `Channel 0`  
-- **RX (EDBG → SAMW25)**: `PB11` → `Channel 1`  
+**(1)** The **UART communication** between the **SAMW25** and **EDBG IC** occurs on **SERCOM4**. To capture data using the Saleae Logic 8, attach the logic analyzer as follows:  
+- **TX (SAMW25 → EDBG)**: → `Channel 0`  
+- **RX (EDBG → SAMW25)**: → `Channel 1`  
 - **GND**: Connect to board ground.  
 
-**Pin Mapping**
+**(2) Pin Mapping**
 
 | **Signal** | **SAMW25 Pin** | **Logic Analyzer Channel** |
 |:------------|:---------------|:---------------------------|
@@ -193,11 +193,11 @@ https://github.com/ese5160/final-project-a07g-a14g-t18-dualcore/tree/main/A07G%2
 | UART RX       | PB11           | CH1                        |
 | GND           | GND            | GND                        |
 
-**(2) Best connection points:**
+**From `SerialConsole.c`, the **TX** (SAMW25 → EDBG) is mapped to `PB10`, and **RX** (EDBG → SAMW25) is mapped to `PB11`.**
 
-- **Test Pads:** Altium Design
-- **Debug Header:** J200 or similar
-- **Direct Pin Soldering:** Last Resort
+- **TX (SAMW25 → EDBG)**: `PB10` → `Channel 0`  
+- **RX (EDBG → SAMW25)**: `PB11` → `Channel 1`  
+- **GND**: Connect to board ground.  
 
 **(3) Critical Settings for the Logic Analyzer**
 
