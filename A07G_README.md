@@ -228,9 +228,9 @@ https://github.com/ese5160/final-project-a07g-a14g-t18-dualcore/tree/main/A07G%2
 
 **Screenshot of Completed CLI Codebase:**
 
-![alt text](A07G_Completed_CLI.png)
-
 ![alt text](A07G_CLI_Helper.png)
+
+![alt text](A07G_Unrecoginized_CLI.png)
 
 
 
