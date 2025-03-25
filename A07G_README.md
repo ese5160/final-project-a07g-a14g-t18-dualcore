@@ -262,3 +262,9 @@ https://github.com/ese5160/final-project-a07g-a14g-t18-dualcore/tree/main/A07G%2
 ![alt text](A07G_CLI_Helper.png)
 
 ![alt text](A07G_Unrecognized_CLI.png)
+
+## Part6: Added CLI Commands:
+
+https://github.com/ese5160/final-project-a07g-a14g-t18-dualcore/blob/main/A07G_Part6.mp4
+
+https://drive.google.com/file/d/16XTh9HimEZRzcR5HKSWC8RlaIymCl6Ff/view?usp=sharing
