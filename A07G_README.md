@@ -230,6 +230,8 @@ https://github.com/ese5160/final-project-a07g-a14g-t18-dualcore/tree/main/A07G%2
 
 ![alt text](A07G_Completed_CLI.png)
 
+![alt text](A07G_CLI_Helper.png)
+
 
 
 
