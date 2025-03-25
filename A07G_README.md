@@ -130,7 +130,7 @@ The system shall prevent excessive opening or closing if the window is already f
 
 ![alt text](A07G_part1_3 .svg)
 
-### **Servo Task**
+### **Servo Task** 
 
 - **Initial State**: Starts in `Servo_init_state`.
 - If the **servo switch is set**, it transitions to `Motor_forward_rotation`.
