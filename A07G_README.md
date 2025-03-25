@@ -195,9 +195,9 @@ https://github.com/ese5160/final-project-a07g-a14g-t18-dualcore/tree/main/A07G%2
 
 **(2) Best connection points:**
 
-- **Test pads:** heck Altium design
-- **Debug header:** J200 or similar
-- **Direct pin soldering:** last resort
+- **Test Pads:** Altium Design
+- **Debug Header:** J200 or similar
+- **Direct Pin Soldering:** Last Resort
 
 **(3) Critical Settings for the Logic Analyzer**
 
@@ -222,7 +222,25 @@ https://github.com/ese5160/final-project-a07g-a14g-t18-dualcore/blob/main/Logic8
 
 ## Part5: Complete the CLI
 
+**Link of Completed CLI Codebase in Github Repository (A07G Completed CLI):**
 
+https://github.com/ese5160/final-project-a07g-a14g-t18-dualcore/tree/main/A07G%20Completed%20CLI
+
+**Screenshot of Completed CLI Codebase:**
+
+![alt text](A07G_CLI_Helper.png)
+
+![alt text](A07G_Unrecognized_CLI.png)
+
+## Part5: Add CLI Commands
+
+**Video of This Functionality in Google Drive (A07G_Part6.mp4):**
+
+https://drive.google.com/file/d/16XTh9HimEZRzcR5HKSWC8RlaIymCl6Ff/view?usp=sharing
+
+**Video of This Functionality in Github Repository (A07G_Part6.mp4):**
+
+https://github.com/ese5160/final-project-a07g-a14g-t18-dualcore/blob/main/A07G_Part6.mp4
 
 
 
