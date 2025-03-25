@@ -222,6 +222,14 @@ https://github.com/ese5160/final-project-a07g-a14g-t18-dualcore/blob/main/Logic8
 
 ## Part5: Complete the CLI
 
+**Link of Completed CLI Codebase in Github Repository (A07G Completed CLI):**
+
+https://github.com/ese5160/final-project-a07g-a14g-t18-dualcore/tree/main/A07G%20Completed%20CLI
+
+**Screenshot of Completed CLI Codebase:**
+
+![alt text](A07G_Completed_CLI.png)
+
 
 
 
