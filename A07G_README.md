@@ -128,7 +128,7 @@ The system shall prevent excessive opening or closing if the window is already f
 
 ## (3) : Submit flowcharts or state machine diagrams:
 
-![alt text](A07G_part1_3 .svg)
+![alt text](A07G_part1_3.svg)
 
 ### **Servo Task** 
 
