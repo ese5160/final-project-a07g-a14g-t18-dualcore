@@ -72,17 +72,7 @@ The system shall incorporate a reed switch to ensure precise detection of the wi
 
 - Secure mounting and alignment to prevent jamming or misalignment.
 
-#### HRS 07 – Voice System  
-
-The hardware design shall allow for an optional voice module, including:  
-
-- A small speaker or amplifier on the PCB or connected via headers.
-  
-- A microcontroller interface (e.g., UART or I²S) for TTS or pre-recorded audio playback.
-  
-- Adequate power supply to drive the speaker without distortion.
-
-#### HRS 08 – Housing & Mounting
+#### HRS 07 – Housing & Mounting
 
 All PCB components must fit within the acrylic window frame enclosure to protect electronics. Additionally:  
 
@@ -92,7 +82,7 @@ All PCB components must fit within the acrylic window frame enclosure to protect
   
 - Proper ventilation or heat dissipation strategies for voltage regulators and motor drivers.
 
-#### HRS 09 – Safety & Protection  
+#### HRS 08 – Safety & Protection  
 
 The hardware design shall include protection features such as:  
 
@@ -112,21 +102,21 @@ The system shall enable users to access real-time window status (open/close/angl
 
 The system shall allow users to modify automatic window operating times (e.g., morning open, evening close) through the app.
 
-**SRS 03 - Manual Window Opening:** 
+**SRS 03 - Manual Window Opening and Closing:** 
 
-The app shall provide a feature to open the window to a desired angle using an “Open Window” button.
+Node-red Dashboard shall provide a Virtual Button to "Open Window" and "Close Window" or angle adjustment.
 
-**SRS 04 - Automated Window Opening by Time:** 
+**SRS 04 - Manual Angle Adjustment for Manual Window Control:**
+
+Node-red Dashboard shall provide a input function for Angle Adjustment.
+
+**SRS 05 - Automated Window Opening by Time:** 
 
 Users shall be able to set specific times for automatic window opening in the app.
 
-**SRS 05 - Automated Window Opening by Smoke:** 
+**SRS 06 - Automated Window Opening by Smoke:** 
 
 If the air quality sensor detects smoke or poor air quality, the system shall immediately open the window for ventilation (highest priority).
-
-**SRS 06 - Manual Window Closing:** 
-
-The app shall include a "Open Window" and "Close Window" button for manual window closure or angle adjustment.
 
 **SRS 07 - Automated Window Closing by Time:** 
 
@@ -142,15 +132,15 @@ Using PDLC film segments on the glass, the system shall display the current time
 
 **SRS 10 - Voice System / Spoken Alerts:**
 
-The system shall support a voice module to announce time, environmental alerts (smoke/rain), or user notifications.
+Node-red Dashboard shall support a Virtual Voice Module to announce time, environmental alerts (smoke/rain), or user notifications.
 
-**SRS 11 - Window Opening/Closing Constraints:**
+**SRS 11 - Window Opening / Closing Constraints:**
 
-The system shall prevent opening if the window is already fully open and prevent closing if it is already fully closed, avoiding redundant motor actions.
+The system shall prevent excessive opening or closing if the window is already fully open or closed, avoiding redundant motor actions.
 
-## (2) : A block diagram outlining the different tasks
+## (2) : A block diagram outlining the different tasks (A07G_BlockDiagram.svg):
 
-![alt text](Part1.2_BlockDiagram.drawio.svg)
+![alt text](A07G_BlockDiagram.svg)
 
 ## Part 2. Understanding the Starter Code
 
@@ -166,23 +156,31 @@ The system shall prevent opening if the window is already fully open and prevent
 
 **(6)** In **`usart_read_callback()`**, when a character is **received (RX)**, it is added to the **`cbufRx`** circular buffer, allowing the system to store incoming UART data efficiently. Similarly, in **`usart_write_callback()`**, when a character has been **sent (TX)**, the next character is retrieved from **`cbufTx`** and transmitted via **`usart_write_buffer_job()`**, ensuring continuous data transmission. These callbacks manage UART communication asynchronously by using **`cbufRx`** and **`cbufTx`** to buffer received and transmitted characters, preventing data loss and reducing CPU overhead.
 
+**(7) UART Receive Flowchart:**
+
+![alt text](A07G_UART_Receive.svg)
+
+**(8) UART Transmission Flowchart:**
+
+![alt text](A07G_UART_Transmission.svg)
+
 **(9)** The function **`StartTasks()`** initializes system tasks and prints the available heap memory before and after task creation. It starts the **Command Line Interface (CLI) task** using **`xTaskCreate(vCommandConsoleTask, "CLI_TASK", CLI_TASK_SIZE, NULL, CLI_PRIORITY, &cliTaskHandle)`**. If the task creation fails, an error message is printed. Based on the provided code, only **one thread (CLI task)** is explicitly started in this function.
 
 ## Part 3. Debug Logger Module 
 
-**Link of Debug Logger Module in Github Repository:**
+**Link of Debug Logger Module in Github Repository (A07G Debug Logger Module):**
 
 https://github.com/ese5160/final-project-a07g-a14g-t18-dualcore/tree/main/A07G%20Debug%20Logger%20Module
 
-**Output of Debug Logger Module:**
+**Output of Debug Logger Module (A07G_DebugLogger_Output.png):**
 
-![alt text](A07G_DebugLogger_Info.png)
+![alt text](A07G_DebugLogger_Output.png)
 
 ## Part 4. Wiretap the convo!
 
 ## 1. Submit Our Answers to Github Repository:
 
-**(1)** The **UART communication** between the **SAMW25** and **EDBG IC** occurs on **SERCOM4**. From `SerialConsole.c`, the **TX** (SAMW25 → EDBG) is mapped to `PA24`, and **RX** (EDBG → SAMW25) is mapped to `PA25`. To capture data using the Saleae Logic 8, attach the logic analyzer as follows:  
+**(1)** The **UART communication** between the **SAMW25** and **EDBG IC** occurs on **SERCOM4**. From `SerialConsole.c`, the **TX** (SAMW25 → EDBG) is mapped to `PB10`, and **RX** (EDBG → SAMW25) is mapped to `PB11`. To capture data using the Saleae Logic 8, attach the logic analyzer as follows:  
 - **TX (SAMW25 → EDBG)**: `PB10` → `Channel 0`  
 - **RX (EDBG → SAMW25)**: `PB11` → `Channel 1`  
 - **GND**: Connect to board ground.  
@@ -191,8 +189,8 @@ https://github.com/ese5160/final-project-a07g-a14g-t18-dualcore/tree/main/A07G%2
 
 | **Signal** | **SAMW25 Pin** | **Logic Analyzer Channel** |
 |:------------|:---------------|:---------------------------|
-| UART TX       | PA24           | CH0                        |
-| UART RX       | PA25           | CH1                        |
+| UART TX       | PB10           | CH0                        |
+| UART RX       | PB11           | CH1                        |
 | GND           | GND            | GND                        |
 
 **(2) Best connection points:**
@@ -210,7 +208,19 @@ https://github.com/ese5160/final-project-a07g-a14g-t18-dualcore/tree/main/A07G%2
 - **Inverted Signal:** `No`
 - **Triggering:** "Start Capture on UART Activity" (Edge trigger on TX)
 
-## 2. Photo of Our Hardware Connections:
+## 2. Photo of Our Hardware Connections (A07G_Logic8_Hardware.png):
+
+![alt text](A07G_Logic8_Hardware.png)
+
+## 3. Screenshot of the Decoded Message (A07G_Logic8_DecodedMessage.png):
+
+![alt text](A07G_Logic8_DecodedMessage.png)
+
+## 4. A Small Capture File of a Wiretapped Conversation (Logic8_DecodedMessage.sal):
+
+https://github.com/ese5160/final-project-a07g-a14g-t18-dualcore/blob/main/Logic8_DecodedMessage.sal
+
+## Part5: Complete the CLI
 
 
 
