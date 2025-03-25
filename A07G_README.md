@@ -232,7 +232,7 @@ https://github.com/ese5160/final-project-a07g-a14g-t18-dualcore/tree/main/A07G%2
 
 ![alt text](A07G_Unrecognized_CLI.png)
 
-## Part5: Add CLI Commands
+## Part6: Add CLI Commands
 
 **Video of This Functionality in Google Drive (A07G_Part6.mp4):**
 
@@ -242,6 +242,9 @@ https://drive.google.com/file/d/16XTh9HimEZRzcR5HKSWC8RlaIymCl6Ff/view?usp=shari
 
 https://github.com/ese5160/final-project-a07g-a14g-t18-dualcore/blob/main/A07G_Part6.mp4
 
+**Codebase of Added CLI Commands in Github Repository (A07G Added CLI Commande):**
+
+https://github.com/ese5160/final-project-a07g-a14g-t18-dualcore/tree/main/A07G%20Added%20CLI%20Commands
 
 
 
